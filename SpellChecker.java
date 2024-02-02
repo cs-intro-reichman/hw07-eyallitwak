@@ -11,7 +11,7 @@ public class SpellChecker {
 
 	/* returns the given string without the first character */
 	public static String tail(String str) {
-		return str.substring(1, str.length());
+		return str.substring(1);
 	}
 
 	/* calculates levenshtein distance between two strings */
@@ -23,7 +23,7 @@ public class SpellChecker {
 			return word1.length();
 
 		if (word1.length() == 0)
-			return word1.length();
+			return word2.length();
 
 		if (word1.charAt(0) == word2.charAt(0))
 			return levenshtein(tail(word1), tail(word2));
